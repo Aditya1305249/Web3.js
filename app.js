@@ -42,7 +42,7 @@ const txObject ={
 //const raw= '0x'+ serializeTransaction.toString('hex');
 
 
-web3.eth.accounts.signTransaction(txObject,privatekey1,(err,txHash)=>{
+web3.eth.accounts.signTransaction(txObject,privatekey1,(err,sHash)=>{
     console.log(sHash);
 
     web3.eth.sendSignedTransaction(sHash.rawTransaction,(error,txHash)=>{
