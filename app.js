@@ -43,9 +43,9 @@ const txObject ={
 
 
 web3.eth.accounts.signTransaction(txObject,privatekey1,(err,txHash)=>{
-    console.log(txHash);
+    console.log(sHash);
 
-    web3.eth.sendSignedTransaction(txHash.rawTransaction,(error,txHash)=>{
+    web3.eth.sendSignedTransaction(sHash.rawTransaction,(error,txHash)=>{
         
 
 
