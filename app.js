@@ -12,11 +12,12 @@ const account2='0x20107D4a4e8BB5D50800288029ad58cE929D2c56';
 //web3.eth.getBalance(account1,(err,bal)=>{ console.log(web3.utils.fromWei(bal,"ether"))});
 
 //web3.eth.getBalance(account2,(err,bal)=>{ console.log(web3.utils.fromWei(bal,"ether"))});
-const account1 = '0x' + util.privateToAddress('A337E5C704CF4187C0CECF4A6E38AD42182B4D038EB8615E239216C5164FEB40').toString('hex');
+
 
 const privatekey1 = new Buffer('A337E5C704CF4187C0CECF4A6E38AD42182B4D038EB8615E239216C5164FEB40','hex');
 //const privatekey2 = Buffer.from(process.env.PRIVATE_KEY_2,'hex');
 
+const account1 = '0x' + util.privateToAddress(privatekey1).toString('hex');
 
 web3.eth.getTransactionCount(account1,async (err,txCount)=>{
 
